@@ -1,0 +1,140 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Telegram Web App</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <div class="telegram-app">
+        <header class="app-header">
+            <button class="profile-button">
+                <img src="icons/44.png" alt="Profile" class="avatar">
+                <span class="profile-name">Пользователь</span>
+            </button>
+            <button class="Balance">
+                <img src="icons/plus.png" alt="Refresh" class="icon refresh-icon">
+                <span>173,763</span>
+                <img src="icons/balance.png" alt="Balance" class="icon">
+            </button>
+            <button class="connect-wallet">
+                <img src="icons/wallet.png" alt="Wallet" class="icon">
+                <span>Connect Wallet</span>
+            </button>
+        </header>
+
+        <main class="app-main">
+            <div class="tab-content active" data-tab-content="case">
+                <div class="centered-content">
+                    <div class="stats">Game Content</div>
+                </div>
+            </div>
+            <div class="tab-content" data-tab-content="trade">
+                <div class="centered-content">
+                    <div class="stats">Trade Content</div>
+                </div>
+            </div>
+            <div class="tab-content" data-tab-content="friends">
+                <div class="centered-content">
+                    <div class="friends-header">
+                        <div class="friends-main-title">Приглашай друзей - Получай награды</div>
+                        <div class="friends-reward-text">Каждый приглашенный друг = 1 🎟️ билет</div>
+                    </div>
+                </div>
+            </div>
+            <div class="tab-content" data-tab-content="raffles">
+                <div class="centered-content">
+                    <div class="stats">Raffles Content</div>
+                </div>
+            </div>
+            <div class="tab-content" data-tab-content="profile">
+    <div class="centered-content">
+        <div class="profile-content">
+            <img src="icons/44.png" alt="Profile" class="profile-avatar">
+            <div class="profile-username">Пользователь</div>
+            <div class="profile-userid">User id #4372654</div>
+            <div class="profile-divider"></div>
+        </div>
+    </div>
+</div>
+        </main>
+
+        <footer class="app-footer">
+            <div class="tab-container">
+                <div class="tab-bar">
+                    <button class="tab-button" data-tab="raffles">
+                        <img src="icons/gift.png" alt="Raffles" class="tab-icon">
+                        <span class="tab-label">Конкурсы</span>
+                    </button>
+                    <button class="tab-button" data-tab="trade">
+                        <img src="icons/123.png" alt="Trade" class="tab-icon">
+                        <span class="tab-label">Trade</span>
+                    </button>
+                    <button class="tab-button active" data-tab="case">
+                        <img src="icons/game.png" alt="Case" class="tab-icon">
+                        <span class="tab-label">Игры</span>
+                    </button>
+                    <button class="tab-button" data-tab="friends">
+                        <img src="icons/friends.png" alt="Friends" class="tab-icon">
+                        <span class="tab-label">Друзья</span>
+                    </button>
+                    <button class="tab-button" data-tab="profile">
+                        <img src="icons/profile.png" alt="Profile" class="tab-icon">
+                        <span class="tab-label">Профиль</span>
+                    </button>
+                    <div class="tab-highlight"></div>
+                </div>
+            </div>
+        </footer>
+    </div>
+<div class="modal-overlay" id="balanceModal">
+  <div class="modal-content">
+    <div class="modal-header">
+      <h3>Пополнение баланса</h3>
+      <span class="modal-close">&times;</span>
+    </div>
+     <div class="payment-selector">
+        <div class="selector-header">
+          <span>Выберите способ оплаты</span>
+          <img src="icons/arrow.png" alt="▼" class="selector-arrow">
+        </div>
+        <div class="payment-methods">
+          <div class="method-option" data-method="card">
+            <img src="icons/card.png" alt="Карта" class="method-icon">
+            <span>Банковская карта</span>
+          </div>
+          <div class="method-option" data-method="crypto">
+            <img src="icons/crypto.png" alt="Криптовалюта" class="method-icon">
+            <span>Криптовалюта</span>
+          </div>
+          <div class="method-option" data-method="sbp">
+            <img src="icons/sbp.png" alt="СБП" class="method-icon">
+            <span>СБП</span>
+          </div>
+        </div>
+      </div>
+    <div class="modal-body">
+      <div class="input-group">
+        <label>Сумма пополнения</label>
+        <input type="number" id="amount" placeholder="Введите сумму" class="no-spinners" min="1">
+      </div>
+      
+      <div class="input-group promo-group">
+        <label>Промокод (если есть)</label>
+        <input type="text" id="promo" placeholder="Введите промокод">
+      </div>
+      
+      <div class="selected-method" id="selectedMethodDisplay" style="display: none;">
+        <img src="" alt="" class="method-icon-selected">
+        <span class="method-name-selected"></span>
+      </div>
+    </div>
+    <div class="modal-footer">
+      <button class="action-button confirm-btn">Пополнить</button>
+    </div>
+  </div>
+</div>
+    <script src="script.js"></script>
+</body>
+</html>
